@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Leaflet con Mosaicos MBTiles</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="./Leaflet.TileLayer.MBTiles.js"></script>
+</head>
+<body>
+  <div id="map" style="height: 1000px;"></div>
+
+  <script>
+    // Inicializar el mapa
+    var map = L.map('map').setView([-84.084,9.909], 13);
+
+    // Cargar mosaicos MBTiles
+    var mbtilesLayer = L.tileLayer.mbTiles('proyecto3.mbtiles', {
+      minZoom: 8,
+      maxZoom: 16
+    }).addTo(map);
+  </script>
+</body>
+</html>
