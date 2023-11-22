@@ -3,23 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa Leaflet con Mosaicos MBTiles</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="./Leaflet.TileLayer.MBTiles.js"></script>
+  <title>Mapa con Mapbox</title>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+  </style>
 </head>
 <body>
-  <div id="map" style="height: 1000px;"></div>
+  <div id="map"></div>
 
   <script>
-    // Inicializar el mapa
-    var map = L.map('map').setView([-84.084,9.909], 13);
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWFsdmFyYWRvZzk5IiwiYSI6ImNscGE2OXdiazAzb2Uyam5scXEyd290MGsifQ.FLd594hW16FVg1-_fajFEQ';
 
-    // Cargar mosaicos MBTiles
-    var mbtilesLayer = L.tileLayer.mbTiles('proyecto3.mbtiles', {
-      minZoom: 8,
-      maxZoom: 16
-    }).addTo(map);
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/aalvaradog99/clpa5rir4002v01qu02qmat6t', // Reemplaza con tu estilo y usuario
+      center: [-84.067,9.926],
+      zoom: 8
+    });
   </script>
 </body>
 </html>
