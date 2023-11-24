@@ -23,6 +23,11 @@
       center: [-84.067,9.926],
       zoom: 8
     });
+    // Agrega el PNG al mapa como un marcador (sustituye 'ruta/a/tu/imagen.png' por la ruta de tu imagen)
+  new mapboxgl.Marker()
+    .setLngLat([-74.5, 40]) // Coordenadas del marcador
+    .setPopup(new mapboxgl.Popup().setHTML('<img src="altura.png" alt="Altura">')) // Popup con la imagen
+    .addTo(map);
   </script>
 </body>
 </html>
