@@ -26,7 +26,7 @@
     // Agrega el PNG al mapa como un marcador (sustituye 'ruta/a/tu/imagen.png' por la ruta de tu imagen)
   new mapboxgl.Marker()
     .setLngLat([-85.117,9.449]) // Coordenadas del marcador
-    .setPopup(new mapboxgl.Popup().setHTML('<img src="altura.png" alt="Altura">')) // Popup con la imagen
+    .setPopup(new mapboxgl.Popup().setHTML('<div><img src="altura.png" alt="Altura"></div><div>Lyeyenda altura</div>')) // Popup con la imagen
     .addTo(map);
   </script>
 </body>
